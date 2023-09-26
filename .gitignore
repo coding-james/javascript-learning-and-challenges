@@ -1,0 +1,4 @@
+node_modules/
+
+# Exclude from ignore
+!.gitignore
