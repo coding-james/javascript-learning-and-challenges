@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const toJadenCase = require("../../../Codewars/7 kyu/jaden_casing_strings");
+import { assert } from "chai";
+import toJadenCase from "../../../src/components/challenges/Codewars/7 kyu/jaden_casing_strings.js";
 
 // CODEWARS: Jaden Casing Strings
 describe("Jaden Casing Strings", () => {

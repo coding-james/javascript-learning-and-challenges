@@ -1,5 +1,5 @@
-const { expect, assert } = require("chai");
-const RomanNumerals = require("../../../Codewars/6 kyu/roman_no_enconder");
+import { expect, assert } from "chai";
+import RomanNumerals from "../../../src/components/challenges/Codewars/6 kyu/roman_no_enconder.js";
 
 // CODEWARS: Roman Numerals Encoder
 describe("Roman Numerals Encoder", () => {

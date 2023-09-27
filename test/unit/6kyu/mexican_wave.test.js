@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const wave = require("../../../Codewars/6 kyu/mexican_wave");
+import { assert } from "chai";
+import wave from "../../../src/components/challenges/Codewars/6 kyu/mexican_wave.js";
 
 // CODEWARS: Mexican Wave
 describe("Mexican Wave", () => {

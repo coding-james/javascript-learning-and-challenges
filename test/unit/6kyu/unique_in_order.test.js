@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const uniqueInOrder = require("../../../Codewars/6 kyu/unique_in_order");
+import { assert } from "chai";
+import uniqueInOrder from "../../../src/components/challenges/Codewars/6 kyu/unique_in_order.js";
 
 // CODEWARS: Unique in order
 describe("Unique in order", () => {

@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const towerBuilder = require("../../../Codewars/6 kyu/build_tower");
+import { assert } from "chai";
+import towerBuilder from "../../../src/components/challenges/Codewars/6 kyu/build_tower.js";
 
 // CODEWARS: Build Tower
 describe("Build Tower", () => {

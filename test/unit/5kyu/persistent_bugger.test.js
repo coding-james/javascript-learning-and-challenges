@@ -1,5 +1,5 @@
-const { expect, assert } = require("chai");
-const persistence = require("../../../Codewars/5 kyu/persistent_bugger");
+import { expect, assert } from "chai";
+import persistence from "../../../src/components/challenges/Codewars/5 kyu/persistent_bugger.js";
 
 // CODEWARS: Persistent Bugger
 describe("Persistent Bugger", () => {

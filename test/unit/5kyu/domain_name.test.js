@@ -1,5 +1,5 @@
-const { expect, assert } = require("chai");
-const domainName = require("../../../Codewars/5 kyu/domain_name");
+import { expect, assert } from "chai";
+import domainName from "../../../src/components/challenges/Codewars/5 kyu/domain_name.js";
 
 // CODEWARS: Extract the domain name from a URL
 describe("Extract the domain name from a URL Tests", () => {

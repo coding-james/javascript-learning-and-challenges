@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const high = require("../../../Codewars/6 kyu/highest_scoring_word");
+import { assert } from "chai";
+import high from "../../../src/components/challenges/Codewars/6 kyu/highest_scoring_word.js";
 
 // CODEWARS: Highest Scoring Word
 describe("Highest Scoring Word", () => {

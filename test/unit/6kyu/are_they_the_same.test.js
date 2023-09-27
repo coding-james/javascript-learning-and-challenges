@@ -1,5 +1,5 @@
-const { expect, assert } = require("chai");
-const comp = require("../../../Codewars/6 kyu/are_they_the_same");
+import { expect, assert } from "chai";
+import comp from "../../../src/components/challenges/Codewars/6 kyu/are_they_the_same.js";
 
 // CODEWARS: Are they the "same"?
 describe("Are they the same?", () => {

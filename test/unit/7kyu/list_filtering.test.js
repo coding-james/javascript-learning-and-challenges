@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const filter_list = require("../../../Codewars/7 kyu/list_filtering");
+import { assert } from "chai";
+import filter_list from "../../../src/components/challenges/Codewars/7 kyu/list_filtering.js";
 
 // CODEWARS: List Filtering
 describe("List Filtering Tests", () => {

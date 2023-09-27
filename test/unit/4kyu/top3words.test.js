@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const topThreeWords = require("../../../Codewars/4 kyu/top3words");
+import { assert } from "chai";
+import topThreeWords from "../../../src/components/challenges/Codewars/4 kyu/top3words.js";
 
 // CODEWARS: Most frequently used words in a text
 describe("Most frequently used words in a text", () => {

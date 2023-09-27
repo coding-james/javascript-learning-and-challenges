@@ -1,5 +1,5 @@
-const { expect, assert } = require("chai");
-const highAndLow = require("../../../Codewars/7 kyu/highest_and_lowest");
+import { expect, assert } from "chai";
+import highAndLow from "../../../src/components/challenges/Codewars/7 kyu/highest_and_lowest.js";
 
 // CODEWARS: Highest and Lowest
 describe("Highest and Lowest Tests", () => {

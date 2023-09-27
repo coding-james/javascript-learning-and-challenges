@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const tenPinBowling = require("../../../Codewars/4 kyu/ten_pin_bowling");
+import { assert } from "chai";
+import tenPinBowling from "../../../src/components/challenges/Codewars/4 kyu/ten_pin_bowling.js";
 
 // CODEWARS: Ten-Pin Bowling
 describe("Ten-Pin Bowling", () => {

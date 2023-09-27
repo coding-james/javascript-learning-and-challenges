@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const solution = require("../../../Codewars/6 kyu/multi_of_3_or_5");
+import { assert } from "chai";
+import solution from "../../../src/components/challenges/Codewars/6 kyu/multi_of_3_or_5.js";
 
 // CODEWARS: Multiples of 3 or 5
 describe("Multiples of 3 or 5", () => {

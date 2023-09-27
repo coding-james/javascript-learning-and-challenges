@@ -1,5 +1,5 @@
-const { expect, assert } = require("chai");
-const disemvowel = require("../../../Codewars/7 kyu/disemvowel_trolls");
+import { expect, assert } from "chai";
+import disemvowel from "../../../src/components/challenges/Codewars/7 kyu/disemvowel_trolls.js";
 
 // CODEWARS: Disemvowel Trolls
 describe("Disemvowel Trolls Tests", () => {

@@ -1,5 +1,5 @@
-const { expect, assert } = require("chai");
-const maxSequence = require("../../../Codewars/5 kyu/maximum_sum_subarray");
+import { expect, assert } from "chai";
+import maxSequence from "../../../src/components/challenges/Codewars/5 kyu/maximum_sum_subarray.js";
 
 // CODEWARS: Maximum subarray sum
 describe("Maximum subarray sum", () => {

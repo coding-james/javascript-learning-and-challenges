@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const { zero, one, two, three, four, five, six, seven, eight, nine, plus, minus, times, dividedBy } = require("../../../Codewars/5 kyu/calculating_with_functions");
+import { assert } from "chai";
+import { zero, one, two, three, four, five, six, seven, eight, nine, plus, minus, times, dividedBy } from "../../../src/components/challenges/Codewars/5 kyu/calculating_with_functions.js";
 
 // CODEWARS: Calculating with Functions
 describe("Calculating with Functions", () => {

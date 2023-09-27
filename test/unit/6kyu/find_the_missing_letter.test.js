@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const findMissingLetter = require("../../../Codewars/6 kyu/find_the_missing_letter");
+import { assert } from "chai";
+import findMissingLetter from "../../../src/components/challenges/Codewars/6 kyu/find_the_missing_letter.js";
 
 // CODEWARS: Find the missing letter
 describe("Find the missing letter", () => {

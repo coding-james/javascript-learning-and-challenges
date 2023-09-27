@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const { VigenèreCipher } = require("../../../Codewars/4 kyu/vigenere_cipher_helper");
+import { assert } from "chai";
+import { VigenèreCipher } from "../../../src/components/challenges/Codewars/4 kyu/vigenere_cipher_helper.js";
 
 // CODEWARS: Vigenère Cipher Helper
 describe("Vigenère Cipher Helper: Encode", () => {

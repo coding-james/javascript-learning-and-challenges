@@ -1,5 +1,5 @@
-const { expect } = require("chai");
-const isPangram = require("../../../Codewars/6 kyu/detect_pangram");
+import { expect } from "chai";
+import isPangram from "../../../src/components/challenges/Codewars/6 kyu/detect_pangram.js";
 
 // CODEWARS: Detect Pangram
 describe("Detect Pangram", () => {

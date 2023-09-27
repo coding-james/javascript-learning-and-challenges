@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const nextSmaller = require("../../../Codewars/4 kyu/next_smaller_number");
+import { assert } from "chai";
+import nextSmaller from "../../../src/components/challenges/Codewars/4 kyu/next_smaller_number.js";
 
 // CODEWARS: Next smaller number with the same digits
 describe("Next smaller number with the same digits", () => {

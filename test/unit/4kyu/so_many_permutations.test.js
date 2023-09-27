@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const permutations = require("../../../Codewars/4 kyu/so_many_permutations");
+import { assert } from "chai";
+import { permutations } from "../../../src/components/challenges/Codewars/4 kyu/so_many_permutations.js";
 
 // CODEWARS: So Many Permutations!
 describe("So Many Permutations!", () => {

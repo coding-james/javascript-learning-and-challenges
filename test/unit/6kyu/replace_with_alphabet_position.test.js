@@ -1,5 +1,5 @@
-const { expect, assert } = require("chai");
-const alphabetPosition = require("../../../Codewars/6 kyu/replace_with_alphabet_position");
+import { expect, assert } from "chai";
+import alphabetPosition from "../../../src/components/challenges/Codewars/6 kyu/replace_with_alphabet_position.js";
 
 // CODEWARS: Replace with alphabet position
 describe("Replace with alphabet position", () => {

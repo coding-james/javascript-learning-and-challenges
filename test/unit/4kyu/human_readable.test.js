@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const formatDuration = require("../../../Codewars/4 kyu/human_readable");
+import { assert } from "chai";
+import { formatDuration } from "../../../src/components/challenges/Codewars/4 kyu/human_readable.js";
 
 // CODEWARS: Human readable duration format
 describe("Human readable duration format", () => {

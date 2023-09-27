@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const snail = require("../../../Codewars/4 kyu/snail");
+import { assert } from "chai";
+import { snail } from "../../../src/components/challenges/Codewars/4 kyu/snail.js";
 
 // CODEWARS: Snail Sort
 describe("Snail Sort", () => {

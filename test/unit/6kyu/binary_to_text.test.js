@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const binaryToString = require("../../../Codewars/6 kyu/binary_to_text");
+import { assert } from "chai";
+import binaryToString from "../../../src/components/challenges/Codewars/6 kyu/binary_to_text.js";
 
 // CODEWARS: Binary to Text (ASCII) Conversion
 describe("Binary to Text (ASCII) Conversion", () => {

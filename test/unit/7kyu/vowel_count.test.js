@@ -1,5 +1,5 @@
-const { expect, assert } = require("chai");
-const getCount = require("../../../Codewars/7 kyu/vowel_count");
+import { expect, assert } from "chai";
+import getCount from "../../../src/components/challenges/Codewars/7 kyu/vowel_count.js";
 
 // CODEWARS: Vowel Count
 describe("Vowel Count Tests", () => {

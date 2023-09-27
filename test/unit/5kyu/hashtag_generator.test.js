@@ -1,5 +1,5 @@
-const { expect, assert } = require("chai");
-const generateHashtag = require("../../../Codewars/5 kyu/hashtag_generator");
+import { expect, assert } from "chai";
+import generateHashtag from "../../../src/components/challenges/Codewars/5 kyu/hashtag_generator.js";
 
 // CODEWARS: The Hashtag Generator
 describe("The Hashtag Generator", () => {

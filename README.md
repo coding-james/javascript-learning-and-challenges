@@ -17,7 +17,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/coding-james/javascript-learning-and-challenges">
-    <img src="assets/images/codingBlue.png" alt="Logo" width="150" height="150">
+    <img src="src/assets/images/codingBlue.png" alt="Logo" width="150" height="150">
   </a>
 
 <h3 align="center">Coding Practice</h3>
