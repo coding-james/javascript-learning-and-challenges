@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { canIVote, agreeOrDisagree, lifePhase, finalGrade, reportingForDuty, calculateWeight, truthyOrFalsy, numImaginaryFriends, sillySentence, howOld, whatRelation, tipCalculator, toEmoticon } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/challenges.js"
+import { canIVote, agreeOrDisagree, lifePhase, finalGrade, reportingForDuty, calculateWeight, truthyOrFalsy, numImaginaryFriends, sillySentence, howOld, whatRelation, tipCalculator, toEmoticon, colorMessage, isEven, numberDigits } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/challenges.js"
 
 describe("Can I Vote?", () => {
     const tests = [
@@ -318,6 +318,70 @@ describe("To Emoticon", () => {
     tests.forEach(({ input, expected }) => {
         it(`it should return ${expected}`, () => {
             assert.equal(toEmoticon(input), expected);
+        });
+    });
+});
+
+describe("Color Message", () => {
+    const tests = [
+        { color1: "red", color2: "red", expected: "The shirt is your favorite color!" },
+        { color1: "yellow", color2: "green", expected: "That is a nice color." },
+        { color1: "some other color", color2: "some other color", expected: "The shirt is your favorite color!" },
+        { color1: "some other color", color2: "red", expected: "That is a nice color." },
+    ];
+
+    tests.forEach(({ color1, color2 }) => {
+        it(`DATATYPE: It should return a String`, () => {
+            assert.isString(colorMessage(color1, color2));
+        })
+    });
+
+    tests.forEach(({ color1, color2, expected }) => {
+        it(`it should return ${expected}`, () => {
+            assert.equal(colorMessage(color1, color2), expected);
+        });
+    });
+});
+
+describe("Is Even", () => {
+    const tests = [
+        { number: 2, expected: true },
+        { number: 10, expected: true },
+        { number: 1, expected: false },
+        { number: 3, expected: false },
+    ];
+
+    tests.forEach(({ number, color2 }) => {
+        it(`DATATYPE: It should return a Boolean`, () => {
+            assert.isBoolean(isEven(number));
+        })
+    });
+
+    tests.forEach(({ number, expected }) => {
+        it(`it should return ${expected}`, () => {
+            assert.equal(isEven(number), expected);
+        });
+    });
+});
+
+describe("Is Even", () => {
+    const tests = [
+        { number: 5, expected: "One digit: 5" },
+        { number: 10, expected: "Two digits: 10" },
+        { number: 63, expected: "Two digits: 63" },
+        { number: 100, expected: "The number is: 100" },
+        { number: -2, expected: "The number is: -2" },
+    ];
+
+    tests.forEach(({ number, color2 }) => {
+        it(`DATATYPE: It should return a String`, () => {
+            assert.isString(numberDigits(number));
+        })
+    });
+
+    tests.forEach(({ number, expected }) => {
+        it(`it should return ${expected}`, () => {
+            assert.equal(numberDigits(number), expected);
         });
     });
 });

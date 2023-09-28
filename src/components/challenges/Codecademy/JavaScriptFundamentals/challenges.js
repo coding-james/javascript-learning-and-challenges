@@ -137,3 +137,21 @@ export function toEmoticon(string) {
             return "|_(* ~ *)_|";
     };
 };
+
+export function colorMessage(color1, color2) {
+    return color1 === color2 ? "The shirt is your favorite color!" : "That is a nice color.";
+};
+
+export function isEven(number) {
+    return number % 2 == 0 ? true : false;
+};
+
+export function numberDigits(num) {
+    if (num >= 0 && num <= 9) {
+        return `One digit: ${num}`;
+    } else if (num >= 10 && num <= 99) {
+        return `Two digits: ${num}`;
+    } else {
+        return `The number is: ${num}`;
+    }
+};
