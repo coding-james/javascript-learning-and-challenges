@@ -2,7 +2,7 @@ import { assert } from "chai";
 import telephoneCheck from "../../../src/components/challenges/freeCodeCamp/JavaScriptAlgorithmsAndDataStructures/telephone-number-validator.js";
 
 describe("Telephone Number Validator", () => {
-    it("should return a Bool", () => {
+    it("DATATYPE: should return a Bool", () => {
         assert.isBoolean(telephoneCheck("1 555-555-5555"));
     });
     
