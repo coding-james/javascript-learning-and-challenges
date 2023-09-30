@@ -1,34 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { Container, Row, Col, Nav, Navbar } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './components/Home.jsx';
+import Counter from './components/Counter.jsx';
+import { FilmSearch } from './components/FilmSearch.jsx';
+import { FilmDetail } from './components/FilmDetail.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Router>
+      <Navbar className="navbar navbar-dark bg-dark">
+        <Container>
+          <Navbar.Brand>JavaScript Examples</Navbar.Brand>
+
+          <Nav>
+            <Nav.Item>
+              <Link to="/" className="nav-link">Home</Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Link to="/counter" className="nav-link">Counter</Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Link to="/film-search" className="nav-link">Film Search</Link>
+            </Nav.Item>
+          </Nav>
+        </Container>
+      </Navbar>
+
+      <Container>
+        <Row>
+          <Col md={12}>
+            <div className="wrapper">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/counter" element={<Counter />} />
+                <Route path="/film-search" element={<FilmSearch />} />
+                <Route path="/film/:imdbID" element={<FilmDetail />} />
+              </Routes>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </Router>
   )
 }
 

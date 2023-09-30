@@ -1,0 +1,2 @@
+API Keys for OMDB API can be requested from:
+https://www.omdbapi.com/apikey.aspx
