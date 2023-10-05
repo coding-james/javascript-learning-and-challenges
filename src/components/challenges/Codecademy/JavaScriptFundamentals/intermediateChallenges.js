@@ -6,3 +6,13 @@ export function reverseArray(array) {
 
     return newArray;
 };
+
+export function greetAliens(array) {
+    let consoleArray = [];
+    for (let index = 0; index < array.length; index++) {
+        const message = `Oh powerful ${array[index]}, we humans offer our unconditional surrender!`;
+        console.log(message);
+        consoleArray.push(message);
+    }
+    return consoleArray;
+};
