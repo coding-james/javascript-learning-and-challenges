@@ -1,6 +1,5 @@
 import { assert } from "chai";
-import sinon from "sinon";
-import { reverseArray, greetAliens } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
+import { reverseArray, greetAliens, convertToBaby } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
 
 describe("Reverse Array", () => {
     const tests = [
@@ -44,6 +43,28 @@ describe("Greet Aliens", () => {
         it(`it should return ${expected}`, () => {
             it(`it should return ${expected}`, () => {
                 assert.deepEqual(greetAliens(input), expected);
+            });
+        });
+    });
+});
+
+describe("Convert to baby", () => {
+    const tests = [
+        { input: ['panda', 'turtle', 'giraffe', 'hippo', 'sloth', 'human'], expected: ['baby panda', 'baby turtle', 'baby giraffe', 'baby hippo', 'baby sloth', 'baby human'] },
+        { input: ["shark"], expected: ["baby shark"] },
+    ];
+
+    tests.forEach(({ input }) => {
+        it(`DATATYPE: It should return an Array`, () => {
+            assert.isArray(convertToBaby(input));
+        })
+    });
+
+    tests.forEach(({ input, expected }) => {
+
+        it(`it should return ${expected}`, () => {
+            it(`it should return ${expected}`, () => {
+                assert.deepEqual(convertToBaby(input), expected);
             });
         });
     });

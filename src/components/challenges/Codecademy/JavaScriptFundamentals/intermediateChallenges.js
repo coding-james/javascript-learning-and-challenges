@@ -16,3 +16,10 @@ export function greetAliens(array) {
     }
     return consoleArray;
 };
+
+export function convertToBaby(array) {
+    for (let index = 0; index < array.length; index++) {
+        array[index] = `baby ${array[index]}`;
+    }
+    return array;
+};
