@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { canIVote, agreeOrDisagree, lifePhase, finalGrade, reportingForDuty, calculateWeight, truthyOrFalsy, numImaginaryFriends, sillySentence, howOld, whatRelation, tipCalculator, toEmoticon, colorMessage, isEven, numberDigits } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/challenges.js"
+import { canIVote, agreeOrDisagree, lifePhase, finalGrade, reportingForDuty, calculateWeight, truthyOrFalsy, numImaginaryFriends, sillySentence, howOld, whatRelation, tipCalculator, toEmoticon, colorMessage, isEven, numberDigits } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/challenges.js";
 
 describe("Can I Vote?", () => {
     const tests = [

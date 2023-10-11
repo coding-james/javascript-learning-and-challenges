@@ -8,7 +8,7 @@ export function addKeyValuePair(sampleObject, addKeys, addValues) {
 
 export function updateValues(sampleObject, modifyKeys, modifyValues) {
     for (let index = 0; index < modifyKeys.length; index++) {
-        sampleObject[modifyKeys[inSdex]] = modifyValues[index];
+        sampleObject[modifyKeys[index]] = modifyValues[index];
     }
 
     return sampleObject
