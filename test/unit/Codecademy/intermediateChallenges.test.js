@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
+import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
 
 describe("Reverse Array", () => {
     const tests = [
@@ -120,6 +120,24 @@ describe("Square each number", () => {
     tests.forEach(({ input, expected }) => {
         it(`it should return ${expected}`, () => {
             assert.deepEqual(squareNums(input), expected);
+        });
+    });
+});
+
+describe("shoutGreetings", () => {
+    const tests = [
+        { input: ["hello", "hi", "heya", "oi", "hey", "yo"], expected: ["HELLO!", "HI!", "HEYA!", "OI!", "HEY!", "YO!"] },
+    ];
+
+    tests.forEach(({ input }) => {
+        it(`DATATYPE: It should return an Array`, () => {
+            assert.isArray(shoutGreetings(input));
+        })
+    });
+
+    tests.forEach(({ input, expected }) => {
+        it(`it should return ${expected}`, () => {
+            assert.deepEqual(shoutGreetings(input), expected);
         });
     });
 });

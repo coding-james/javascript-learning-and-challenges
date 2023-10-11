@@ -51,3 +51,7 @@ export function acceptEverything(arr) {
 export function squareNums(arr) {
     return arr.map((element) => element * element);
 }
+
+export function shoutGreetings(arr) {
+    return arr.map((element) => element.toUpperCase() + "!");
+}
