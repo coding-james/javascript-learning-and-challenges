@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
+import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
 
 describe("Reverse Array", () => {
     const tests = [
@@ -39,11 +39,8 @@ describe("Greet Aliens", () => {
     });
 
     tests.forEach(({ input, expected }) => {
-
         it(`it should return ${expected}`, () => {
-            it(`it should return ${expected}`, () => {
-                assert.deepEqual(greetAliens(input), expected);
-            });
+            assert.deepEqual(greetAliens(input), expected);
         });
     });
 });
@@ -61,11 +58,8 @@ describe("Convert to baby", () => {
     });
 
     tests.forEach(({ input, expected }) => {
-
         it(`it should return ${expected}`, () => {
-            it(`it should return ${expected}`, () => {
-                assert.deepEqual(convertToBaby(input), expected);
-            });
+            assert.deepEqual(convertToBaby(input), expected);
         });
     });
 });
@@ -84,16 +78,13 @@ describe("Decline Everything", () => {
     });
 
     tests.forEach(({ input, expected }) => {
-
         it(`it should return ${expected}`, () => {
-            it(`it should return ${expected}`, () => {
-                assert.deepEqual(declineEverything(input), expected);
-            });
+            assert.deepEqual(declineEverything(input), expected);
         });
     });
 });
 
-describe("Decline Everything", () => {
+describe("Accept Everything", () => {
     const tests = [
         { input: ["broccoli", "spinach", "cauliflower", "broccoflower"], expected: ["Ok, I guess I will eat some broccoli.", "Ok, I guess I will eat some spinach.", "Ok, I guess I will eat some cauliflower.", "Ok, I guess I will eat some broccoflower."] },
         { input: ["pepperoni", "pineapple"], expected: ["Ok, I guess I will eat some pepperoni.", "Ok, I guess I will eat some pineapple."] },
@@ -107,11 +98,8 @@ describe("Decline Everything", () => {
     });
 
     tests.forEach(({ input, expected }) => {
-
         it(`it should return ${expected}`, () => {
-            it(`it should return ${expected}`, () => {
-                assert.deepEqual(acceptEverything(input), expected);
-            });
+            assert.deepEqual(acceptEverything(input), expected);
         });
     });
 });

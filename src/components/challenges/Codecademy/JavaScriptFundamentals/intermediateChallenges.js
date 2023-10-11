@@ -18,10 +18,11 @@ export function greetAliens(array) {
 };
 
 export function convertToBaby(array) {
-    for (let index = 0; index < array.length; index++) {
-        array[index] = `baby ${array[index]}`;
+    let output = array.slice();
+    for (let index = 0; index < output.length; index++) {
+        output[index] = `baby ${output[index]}`;
     }
-    return array;
+    return output;
 };
 
 // declineEverything() and acceptEverything()
@@ -31,8 +32,11 @@ const politelyDecline = (veg) => {
 }
 
 export const declineEverything = arr => {
+    // arr.forEach(result.push(politelyDecline));
     let result = [];
-    result.push(arr.forEach(politelyDecline));
+    arr.forEach(element => {
+        result.push(politelyDecline(element));
+    });
     return result;
 }
 
