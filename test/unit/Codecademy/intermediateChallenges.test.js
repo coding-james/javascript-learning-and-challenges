@@ -103,3 +103,23 @@ describe("Accept Everything", () => {
         });
     });
 });
+
+describe("Square each number", () => {
+    const tests = [
+        { input: [2, 7, 9, 171, 52, 33, 14], expected: [4, 49, 81, 29241, 2704, 1089, 196] },
+        { input: [], expected: [] },
+        { input: [1, 2, 3], expected: [1, 4, 9] },
+    ];
+
+    tests.forEach(({ input }) => {
+        it(`DATATYPE: It should return an Array`, () => {
+            assert.isArray(squareNums(input));
+        })
+    });
+
+    tests.forEach(({ input, expected }) => {
+        it(`it should return ${expected}`, () => {
+            assert.deepEqual(squareNums(input), expected);
+        });
+    });
+});

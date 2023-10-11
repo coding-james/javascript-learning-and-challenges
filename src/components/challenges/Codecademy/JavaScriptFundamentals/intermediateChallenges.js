@@ -47,3 +47,7 @@ export function acceptEverything(arr) {
     });
     return result;
 };
+
+export function squareNums(arr) {
+    return arr.map((element) => element * element);
+}
