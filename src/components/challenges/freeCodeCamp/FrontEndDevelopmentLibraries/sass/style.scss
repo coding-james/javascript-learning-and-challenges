@@ -1,0 +1,113 @@
+$text-color: red; // set variables
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin border-stroke($val) {
+    @if $val ==light {
+        border: 1px solid black;
+    }
+
+    @else if $val ==medium {
+        border: 3px solid black;
+    }
+
+    @else if $val ==heavy {
+        border: 6px solid black;
+    }
+
+    @else {
+        border: none;
+    }
+}
+
+.header {
+    text-align: center;
+}
+
+.blog-post,
+h2 {
+    color: $text-color; //use variable
+}
+
+// Nest CSS - useful way to organise style sheet
+.blog-post2 {
+    h1 {
+        text-align: center;
+        color: blue;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+// Mixin -  a group of CSS declarations that can be reused throughout the style sheet
+#awesome {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    @include border-radius(15px);
+}
+
+// use @if and @else
+#box {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    @include border-stroke(medium);
+}
+
+// For Loop - TO stops before end, THROUGH is inclusive
+@for $i from 1 to 6 {
+    .text-#{$i} {
+        font-size: 15px * $i;
+    }
+}
+
+// For Each
+//formatting div as example code only had these divs
+.divSize {
+    height: 200px;
+    width: 200px;
+}
+
+// each loop to map in colors
+@each $color in blue,
+black,
+red {
+    .#{$color}-bg {
+        background-color: $color;
+    }
+}
+
+//While Loop
+$x: 1;
+
+@while $x < 6 {
+    .msg-#{$x} {
+        font-size: 15px * $x
+    }
+
+    $x: $x + 1;
+}
+
+// Extend rules to another element
+h3 {
+    text-align: center;
+}
+
+.info {
+    width: 200px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.info-important {
+    @extend .info;
+    background-color: magenta;
+}
