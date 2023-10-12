@@ -55,3 +55,7 @@ export function squareNums(arr) {
 export function shoutGreetings(arr) {
     return arr.map((element) => element.toUpperCase() + "!");
 }
+
+export function sortYears(arr) {
+    return arr.sort().reverse();    
+}

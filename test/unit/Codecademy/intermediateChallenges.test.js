@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
+import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
 
 describe("Reverse Array", () => {
     const tests = [
@@ -138,6 +138,24 @@ describe("shoutGreetings", () => {
     tests.forEach(({ input, expected }) => {
         it(`it should return ${expected}`, () => {
             assert.deepEqual(shoutGreetings(input), expected);
+        });
+    });
+});
+
+describe("sort years", () => {
+    const tests = [
+        { input: [1970, 1999, 1951, 1982, 1963, 2011, 2018, 1922], expected: [2018, 2011, 1999, 1982, 1970, 1963, 1951, 1922] },
+    ];
+
+    tests.forEach(({ input }) => {
+        it(`DATATYPE: It should return an Array`, () => {
+            assert.isArray(sortYears(input));
+        })
+    });
+
+    tests.forEach(({ input, expected }) => {
+        it(`it should return ${expected}`, () => {
+            assert.deepEqual(sortYears(input), expected);
         });
     });
 });
