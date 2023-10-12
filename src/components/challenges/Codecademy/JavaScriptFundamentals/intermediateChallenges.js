@@ -57,5 +57,9 @@ export function shoutGreetings(arr) {
 }
 
 export function sortYears(arr) {
-    return arr.sort().reverse();    
+    return arr.sort().reverse();
 }
+
+export function justCoolStuff(arr1, arr2) {
+    return arr2.filter(item => arr1.includes(item));
+};

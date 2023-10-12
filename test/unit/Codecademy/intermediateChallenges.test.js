@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
+import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
 
 describe("Reverse Array", () => {
     const tests = [
@@ -156,6 +156,25 @@ describe("sort years", () => {
     tests.forEach(({ input, expected }) => {
         it(`it should return ${expected}`, () => {
             assert.deepEqual(sortYears(input), expected);
+        });
+    });
+});
+
+describe("just Cool Stuff", () => {
+    const tests = [
+        { input1: ['gameboys', 'skateboards', 'backwards hats', 'fruit-by-the-foot', 'pogs', 'my room', 'temporary tattoos'], input2: ['rules', 'fruit-by-the-foot', 'wedgies', 'sweaters', 'skateboards', 'family-night', 'my room', 'braces', 'the information superhighway'], expected: ['fruit-by-the-foot', 'skateboards', 'my room'] },
+        { input1: ['apple', 'orange', 'banana', 'pear'], input2: ['kiwi', 'banana', 'lemin', 'lime', 'apple', 'star fruit', 'pear', 'peach'], expected: ['banana', 'apple', 'pear'] },
+    ];
+
+    tests.forEach(({ input1, input2 }) => {
+        it(`DATATYPE: It should return an Array`, () => {
+            assert.isArray(justCoolStuff(input1, input2));
+        })
+    });
+
+    tests.forEach(({ input1, input2, expected }) => {
+        it(`it should return ${expected}`, () => {
+            assert.deepEqual(justCoolStuff(input1, input2), expected);
         });
     });
 });
