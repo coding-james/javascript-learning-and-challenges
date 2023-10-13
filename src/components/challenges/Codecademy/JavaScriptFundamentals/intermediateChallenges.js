@@ -87,3 +87,12 @@ export function dogFactory(name, breed, weight) {
         weight: weight
     }
 }
+
+//  takes a number as an argument and returns the factorial of the number. e.g. 6 becomes 6 * 5 * 4 * 3 * 2 * 1 = 720
+export function factorial(num) {
+    let result = 1;
+    for (let index = num; index > 1; index--) {
+        result *= index;
+    }
+    return result;
+};

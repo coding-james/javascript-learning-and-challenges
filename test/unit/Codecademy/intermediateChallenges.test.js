@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan, sortSpeciesByTeeth, findMyKeys, dogFactory } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
+import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan, sortSpeciesByTeeth, findMyKeys, dogFactory, factorial } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
 
 describe("Reverse Array", () => {
     const tests = [
@@ -252,6 +252,25 @@ describe("dogFactory", () => {
     tests.forEach(({ name, breed, weight, expected }) => {
         it(`it should return ${JSON.stringify(expected)}`, () => {
             assert.deepEqual(dogFactory(name, breed, weight), expected);
+        });
+    });
+});
+
+describe("factorial", () => {
+    const tests = [
+        { input: 6, expected: 720 },
+        { input: 10, expected: 3628800 },
+    ];
+
+    tests.forEach(({ input }) => {
+        it(`DATATYPE: It should return a Number`, () => {
+            assert.isNumber(factorial(input));
+        })
+    });
+
+    tests.forEach(({ input, expected }) => {
+        it(`it should return ${JSON.stringify(expected)}`, () => {
+            assert.equal(factorial(input), expected);
         });
     });
 });
