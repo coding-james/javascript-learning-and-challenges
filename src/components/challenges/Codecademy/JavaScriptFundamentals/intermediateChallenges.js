@@ -96,3 +96,24 @@ export function factorial(num) {
     }
     return result;
 };
+
+// returns the length between two characters in a string
+export function subLength(word, letter) {
+    let count = 0;
+    let index1;
+    let index2;
+
+    for (let i = 0; i < word.length; i++) {
+        if (count === 0 && word[i] === letter) {
+            count++;
+            index1 = i;
+        } else if (count === 1 && word[i] === letter) {
+            count++;
+            index2 = i + 1;
+        } else if (word[i] === letter) {
+            count++;
+        }
+    }
+
+    return count <= 1 || count > 2 ? 0 : index2 - index1;
+};

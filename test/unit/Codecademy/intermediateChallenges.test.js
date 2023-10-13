@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan, sortSpeciesByTeeth, findMyKeys, dogFactory, factorial } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
+import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan, sortSpeciesByTeeth, findMyKeys, dogFactory, factorial, subLength } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
 
 describe("Reverse Array", () => {
     const tests = [
@@ -269,8 +269,29 @@ describe("factorial", () => {
     });
 
     tests.forEach(({ input, expected }) => {
-        it(`it should return ${JSON.stringify(expected)}`, () => {
+        it(`it should return ${expected}`, () => {
             assert.equal(factorial(input), expected);
+        });
+    });
+});
+
+describe("subLength", () => {
+    const tests = [
+        { inputWord: "Saturday", inputLetter: "a", expected: 6 },
+        { inputWord: "summer", inputLetter: "m", expected: 2 },
+        { inputWord: "digitize", inputLetter: "i", expected: 0 },
+        { inputWord: "cheesecake", inputLetter: "k", expected: 0 },
+    ];
+
+    tests.forEach(({ inputWord, inputLetter }) => {
+        it(`DATATYPE: It should return a Number`, () => {
+            assert.isNumber(subLength(inputWord, inputLetter));
+        })
+    });
+
+    tests.forEach(({ inputWord, inputLetter, expected }) => {
+        it(`it should return ${expected}`, () => {
+            assert.equal(subLength(inputWord, inputLetter), expected);
         });
     });
 });
