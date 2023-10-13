@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
+import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan, sortSpeciesByTeeth } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
 
 describe("Reverse Array", () => {
     const tests = [
@@ -194,6 +194,24 @@ describe("is The Dinner Vegan", () => {
     tests.forEach(({ input1, expected }) => {
         it(`it should return ${expected}`, () => {
             assert.equal(isTheDinnerVegan(input1), expected);
+        });
+    });
+});
+
+describe("sortSpeciesByTeeth", () => {
+    const tests = [
+        { input1: [{ speciesName: 'shark', numTeeth: 50 }, { speciesName: 'dog', numTeeth: 42 }, { speciesName: 'alligator', numTeeth: 80 }, { speciesName: 'human', numTeeth: 32 }], expected: [{ speciesName: 'human', numTeeth: 32 }, { speciesName: 'dog', numTeeth: 42 }, { speciesName: 'shark', numTeeth: 50 }, { speciesName: 'alligator', numTeeth: 80 }] },
+    ];
+
+    tests.forEach(({ input1 }) => {
+        it(`DATATYPE: It should return an Array`, () => {
+            assert.isArray(sortSpeciesByTeeth(input1));
+        })
+    });
+
+    tests.forEach(({ input1, expected }) => {
+        it(`it should return ${expected}`, () => {
+            assert.deepEqual(sortSpeciesByTeeth(input1), expected);
         });
     });
 });

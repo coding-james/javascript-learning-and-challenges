@@ -68,3 +68,8 @@ export function justCoolStuff(arr1, arr2) {
 export function isTheDinnerVegan(meal) {
     return meal.every((element) => element.source === "plant");
 };
+
+// Sorts an array in ascending order based on value of one of their properties
+export function sortSpeciesByTeeth(array) {
+    return array.sort((a, b) => a.numTeeth - b.numTeeth);
+};
