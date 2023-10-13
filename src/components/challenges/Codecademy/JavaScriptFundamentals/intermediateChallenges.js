@@ -63,3 +63,8 @@ export function sortYears(arr) {
 export function justCoolStuff(arr1, arr2) {
     return arr2.filter(item => arr1.includes(item));
 };
+
+// Checks is every object in array matches criteria for specified field
+export function isTheDinnerVegan(meal) {
+    return meal.every((element) => element.source === "plant");
+};

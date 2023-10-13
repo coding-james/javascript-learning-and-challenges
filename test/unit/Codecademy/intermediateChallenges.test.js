@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
+import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
 
 describe("Reverse Array", () => {
     const tests = [
@@ -175,6 +175,25 @@ describe("just Cool Stuff", () => {
     tests.forEach(({ input1, input2, expected }) => {
         it(`it should return ${expected}`, () => {
             assert.deepEqual(justCoolStuff(input1, input2), expected);
+        });
+    });
+});
+
+describe("is The Dinner Vegan", () => {
+    const tests = [
+        { input1: [{ name: 'hamburger', source: 'meat' }, { name: 'cheese', source: 'dairy' }, { name: 'ketchup', source: 'plant' }, { name: 'bun', source: 'plant' }, { name: 'dessert twinkies', source: 'unknown' }], expected: false },
+        { input1: [{ name: 'tofu', source: 'plant' }, { name: 'ketchup', source: 'plant' }, { name: 'bun', source: 'plant' }, { name: 'fruit salad', source: 'plant' }], expected: true },
+    ];
+
+    tests.forEach(({ input1 }) => {
+        it(`DATATYPE: It should return a Bool`, () => {
+            assert.isBoolean(isTheDinnerVegan(input1));
+        })
+    });
+
+    tests.forEach(({ input1, expected }) => {
+        it(`it should return ${expected}`, () => {
+            assert.equal(isTheDinnerVegan(input1), expected);
         });
     });
 });
