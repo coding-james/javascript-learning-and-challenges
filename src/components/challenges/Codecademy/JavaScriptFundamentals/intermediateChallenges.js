@@ -73,3 +73,8 @@ export function isTheDinnerVegan(meal) {
 export function sortSpeciesByTeeth(array) {
     return array.sort((a, b) => a.numTeeth - b.numTeeth);
 };
+
+// Check if an item appears in an array and return index
+export function findMyKeys(arr) {
+    return arr.indexOf("keys");
+};

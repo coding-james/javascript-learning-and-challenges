@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan, sortSpeciesByTeeth } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
+import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan, sortSpeciesByTeeth, findMyKeys } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
 
 describe("Reverse Array", () => {
     const tests = [
@@ -212,6 +212,26 @@ describe("sortSpeciesByTeeth", () => {
     tests.forEach(({ input1, expected }) => {
         it(`it should return ${expected}`, () => {
             assert.deepEqual(sortSpeciesByTeeth(input1), expected);
+        });
+    });
+});
+
+describe("findMyKeys", () => {
+    const tests = [
+        { input: ['credit card', 'screwdriver', 'receipt', 'gum', 'keys', 'used gum', 'plastic spoon'], expected: 4 },
+        { input: ['keys', 'used gum', 'plastic spoon'], expected: 0 },
+        { input: ['credit card', 'screwdriver', 'receipt', 'gum', 'used gum', 'plastic spoon'], expected: -1 },
+    ];
+
+    tests.forEach(({ input }) => {
+        it(`DATATYPE: It should return a Number`, () => {
+            assert.isNumber(findMyKeys(input));
+        })
+    });
+
+    tests.forEach(({ input, expected }) => {
+        it(`it should return ${expected}`, () => {
+            assert.deepEqual(findMyKeys(input), expected);
         });
     });
 });
