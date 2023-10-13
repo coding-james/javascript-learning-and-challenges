@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan, sortSpeciesByTeeth, findMyKeys } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
+import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan, sortSpeciesByTeeth, findMyKeys, dogFactory } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
 
 describe("Reverse Array", () => {
     const tests = [
@@ -232,6 +232,26 @@ describe("findMyKeys", () => {
     tests.forEach(({ input, expected }) => {
         it(`it should return ${expected}`, () => {
             assert.deepEqual(findMyKeys(input), expected);
+        });
+    });
+});
+
+describe("dogFactory", () => {
+    const tests = [
+        { name: 'Joe', breed: 'Pug', weight: 27, expected: { name: 'Joe', breed: 'Pug', weight: 27 } },
+        { name: 'Eric', breed: 'Dachshund', weight: 10, expected: { name: 'Eric', breed: 'Dachshund', weight: 10 } },
+        { name: 'Idol', breed: 'Labrador', weight: 32, expected: { name: 'Idol', breed: 'Labrador', weight: 32 } },
+    ];
+
+    tests.forEach(({ name, breed, weight }) => {
+        it(`DATATYPE: It should return a Object`, () => {
+            assert.isObject(dogFactory(name, breed, weight));
+        })
+    });
+
+    tests.forEach(({ name, breed, weight, expected }) => {
+        it(`it should return ${JSON.stringify(expected)}`, () => {
+            assert.deepEqual(dogFactory(name, breed, weight), expected);
         });
     });
 });

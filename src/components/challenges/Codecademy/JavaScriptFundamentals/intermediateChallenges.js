@@ -78,3 +78,12 @@ export function sortSpeciesByTeeth(array) {
 export function findMyKeys(arr) {
     return arr.indexOf("keys");
 };
+
+// Return as object
+export function dogFactory(name, breed, weight) {
+    return {
+        name: name,
+        breed: breed,
+        weight: weight
+    }
+}
