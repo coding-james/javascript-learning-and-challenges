@@ -117,3 +117,20 @@ export function subLength(word, letter) {
 
     return count <= 1 || count > 2 ? 0 : index2 - index1;
 };
+
+// take a list and combine
+export function groceries(list) {
+    let result;
+    let combinedList = list.map((element) => element.item);
+
+    for (let i = 0; i < combinedList.length; i++) {
+        if (i === 0) {
+            result = combinedList[i];
+        } else if (i === combinedList.length - 1) {
+            result += ` and ${combinedList[i]}`;
+        } else {
+            result += `, ${combinedList[i]}`;
+        }
+    }
+    return result;
+};

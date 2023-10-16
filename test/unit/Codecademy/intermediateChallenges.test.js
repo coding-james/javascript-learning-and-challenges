@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan, sortSpeciesByTeeth, findMyKeys, dogFactory, factorial, subLength } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
+import { reverseArray, greetAliens, convertToBaby, declineEverything, acceptEverything, squareNums, shoutGreetings, sortYears, justCoolStuff, isTheDinnerVegan, sortSpeciesByTeeth, findMyKeys, dogFactory, factorial, subLength, groceries } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/intermediateChallenges.js";
 
 describe("Reverse Array", () => {
     const tests = [
@@ -292,6 +292,26 @@ describe("subLength", () => {
     tests.forEach(({ inputWord, inputLetter, expected }) => {
         it(`it should return ${expected}`, () => {
             assert.equal(subLength(inputWord, inputLetter), expected);
+        });
+    });
+});
+
+describe("groceries", () => {
+    const tests = [
+        { input: [{ item: 'Carrots' }, { item: 'Hummus' }, { item: 'Pesto' }, { item: 'Rigatoni' }], expected: "Carrots, Hummus, Pesto and Rigatoni" },
+        { input: [{ item: 'Bread' }, { item: 'Butter' }], expected: "Bread and Butter" },
+        { input: [{ item: 'Cheese Balls' }], expected: "Cheese Balls" },
+    ];
+
+    tests.forEach(({ input }) => {
+        it(`DATATYPE: It should return a String`, () => {
+            assert.isString(groceries(input));
+        })
+    });
+
+    tests.forEach(({ input, expected }) => {
+        it(`it should return ${expected}`, () => {
+            assert.equal(groceries(input), expected);
         });
     });
 });
