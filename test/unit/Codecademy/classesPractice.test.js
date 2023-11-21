@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { Network, Player, balloonAttack } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/classesPractice.js";
+import { Network, Player, balloonAttack, ShiftCipher } from "../../../src/components/challenges/Codecademy/JavaScriptFundamentals/classesPractice.js";
 
 describe("Network - Movie Time", () => {
     const tests = [
@@ -28,5 +28,34 @@ describe("Player - Balloon Attack", () => {
         it(`it should return ${expected}`, () => {
             assert.equal(balloonAttack(player1, player2), expected);
         })
+    });
+});
+
+describe("ShiftCipher", () => {
+    const tests = [
+        { shift: 2, decrypted: "I love to code!", encrypted: "K NQXG VQ EQFG!" },
+        { shift: 2, decrypted: "i <3 my puppy", encrypted: "K <3 OA RWRRA" },
+        { shift: 1, decrypted: "z", encrypted: "a" },
+        { shift: 5, decrypted: "hello!", encrypted: "MJQQT!" },
+        { shift: 1, decrypted: "12345", encrypted: "12345" },
+        { shift: 26, decrypted: "hello!", encrypted: "HELLO!" },
+    ];
+
+    describe("encrypt", () => {
+        tests.forEach(({ shift, decrypted, encrypted }) => {
+            let cipher = new ShiftCipher(shift);
+            it(`it should return ${encrypted}`, () => {
+                assert.equal(cipher.encrypt(decrypted), encrypted.toUpperCase());
+            })
+        });
+    });
+
+    describe("decrypt", () => {
+        tests.forEach(({ shift, decrypted, encrypted }) => {
+            let cipher = new ShiftCipher(shift);
+            it(`it should return ${decrypted}`, () => {
+                assert.equal(cipher.decrypt(encrypted), decrypted.toLowerCase());
+            })
+        });
     });
 });
