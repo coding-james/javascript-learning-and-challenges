@@ -49,6 +49,8 @@ This repo is used for me to practice JavaScript and related Stacks and complete 
 ### Built With
 * [![JavaScript][JavaScript-shield]][JavaScript-url]
 * [![Nodejs][Nodejs-shield]][Nodejs-url]
+* [![React][React-shield]][React-url]
+* [![Bootstrap][Bootstrap-shield]][Bootstrap-url]
 * [![Mocha][Mocha-shield]][Mocha-url]
 * [![Chai][Chai-shield]][Chai-url]
 
@@ -133,3 +135,7 @@ Project Link: [https://github.com/coding-james/javascript-learning-and-challenge
 [Mocha-url]: https://mochajs.org/
 [Chai-shield]: https://img.shields.io/badge/chai.js-323330?style=for-the-badge&logo=chai&logoColor=red
 [Chai-url]: https://www.chaijs.com/
+[React-shield]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://react.dev/
+[Bootstrap-shield]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com/

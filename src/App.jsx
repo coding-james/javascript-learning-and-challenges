@@ -5,6 +5,7 @@ import Home from './components/Home.jsx';
 import Counter from './components/Counter.jsx';
 import { FilmSearch } from './components/FilmSearch.jsx';
 import { FilmDetail } from './components/FilmDetail.jsx';
+import { NumberToRoman } from './components/NumberToRoman.jsx';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
             <Nav.Item>
               <Link to="/film-search" className="nav-link">Film Search</Link>
             </Nav.Item>
+            <Nav.Item>
+              <Link to="/number-to-roman" className="nav-link">Convert to Roman</Link>
+            </Nav.Item>
           </Nav>
         </Container>
       </Navbar>
@@ -36,6 +40,7 @@ function App() {
                 <Route path="/counter" element={<Counter />} />
                 <Route path="/film-search" element={<FilmSearch />} />
                 <Route path="/film/:imdbID" element={<FilmDetail />} />
+                <Route path="/number-to-roman" element={<NumberToRoman />} />
               </Routes>
             </div>
           </Col>
