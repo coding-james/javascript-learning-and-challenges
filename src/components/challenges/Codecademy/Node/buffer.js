@@ -12,7 +12,7 @@ const bufferConcat = Buffer.concat(bufferArray);
 // Translate buffer to string
 const bufferString = bufferConcat.toString();
 
-// Uncomment the appropriate `console.log()` to ouput to console
+// Uncomment the appropriate `console.log()` to output to console
 console.log(bufferAlloc);
 console.log('Buffer 1:', buffer1, 'Buffer 2:', buffer2)
 console.log(bufferConcat);
