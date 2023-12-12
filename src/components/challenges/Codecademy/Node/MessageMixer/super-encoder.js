@@ -1,14 +1,20 @@
 // Import the encryptors functions here.
+import { caesarCipher, symbolCipher, reverseCipher } from "./encryptors.js";
 
-
-const encodeMessage = (str) => {
+export const encodeMessage = (str) => {
     // Use the encryptor functions here.
-
+    let encrypted = caesarCipher(str, 6);
+    encrypted = reverseCipher(encrypted);
+    encrypted = symbolCipher(encrypted);
+    return encrypted;
 }
 
-const decodeMessage = (str) => {
+export const decodeMessage = (str) => {
     // Use the encryptor functions here.
-
+    let decrypted = symbolCipher(str);
+    decrypted = reverseCipher(decrypted);
+    decrypted = caesarCipher(decrypted, 20);
+    return decrypted;
 }
 
 // User input / output.
