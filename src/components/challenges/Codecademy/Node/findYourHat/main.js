@@ -1,10 +1,14 @@
-import prompt from 'prompt-sync';
+// import prompt from 'prompt-sync';
 // https://copyprogramming.com/howto/cannot-find-module-prompt-sync#convert-prompt-sync-require-into-import-method
 
 const hat = '^';
 const hole = 'O';
 const fieldCharacter = '░';
 const pathCharacter = '*';
+let validMoves = ["u", "d", "l", "r"];
+let currentPosX = 0;
+let currentPosY = 0;
+let requestInput = "Which direction would you like to move? u = up, d = down, l = left, r = right";
 
 class Field {
     constructor(field) {
@@ -55,41 +59,43 @@ class Field {
     }
 }
 
-console.log("Which direction would you like to move?");
 let game = new Field();
 game.generateField(5, 5, 10);
 game.print();
-let currentPos = game.field[0][0] == pathCharacter ? [0, 0] : [0, 1];
+console.log(requestInput);
+
+if (game.field[currentPosX][currentPosY] !== pathCharacter) {
+    currentPosY++;
+}
 
 let playGame = (userInput) => {
-    let input = userInput.toString().trim();
-    currentPosX = currentPos[0];
-    currentPosY = currentPos[1];
-
-    switch (input) {
-        case "u":
-            currentPos[0] = currentPosX + 1;
-            break;
-        case "d":
-            currentPos[0] = currentPosX - 1;
-            break;
-        case "l":
-            currentPos[1] = currentPosY - 1;
-            break;
-        case "r":
-            currentPos[1] = currentPosY + 1;
-            break;
-        default:
-            console.log("Invalid selection, try again");
-            break;
+    let input = userInput.toString().trim().toLowerCase();
+    if (!validMoves.includes(input)) {
+        process.stdout.write("Invalid selection, try again");
+    } else {
+        switch (input) {
+            case "u":
+                currentPosX -= 1;
+                CheckOutcome(currentPosX, currentPosY);
+                break;
+            case "d":
+                currentPosX += 1;
+                CheckOutcome(currentPosX, currentPosY);
+                break;
+            case "l":
+                currentPosY -= 1;
+                CheckOutcome(currentPosX, currentPosY);
+                break;
+            case "r":
+                currentPosY += 1;
+                CheckOutcome(currentPosX, currentPosY);
+                break;
+            default:
+                // TODO: Update to pick up if out of map
+                console.log("Invalid selection, try again");
+                break;
+        }
     }
-    // mark position
-    // check if
-    //      > found hat = win
-    //      > land on hole = lose
-    //      > attempts to move outside field
-    // print map
-    // next move (if not ended)
 };
 
 // Random Number Generator
@@ -98,29 +104,30 @@ function RandomNumber(min, max) {
 }
 
 // Check Outcome
-function CheckOutcome(array) {
-
-    switch (currentPos) {
+function CheckOutcome(x, y) {
+    let checkPos = game.field[x][y];
+    switch (checkPos) {
         case hat:
             console.log("You Win!");
-            break;
+            process.exit();
         case hole:
             console.log("You lose :(");
+            process.exit();
         case pathCharacter:
-            console.log("Which direction would you like to move?");
+            console.clear();
+            game.print();
+            console.log(requestInput);
         case fieldCharacter:
-            // replace with pathCharacter
-            console.log("Which direction would you like to move?");
+            game.field[x][y] = pathCharacter;
+            console.clear();
+            game.print();
+            console.log(requestInput);
+            break;
         default:
             console.log("Invalid move, you must stay within the field");
+            game.print();
             break;
     }
 }
 
-// game.print();
-
-// for (let index = 0; index < 10; index++) {
-//     console.log(`\nGame ${index + 1}`);
-//     game.generateField(3,3,50);
-//     game.print();
-// }
+process.stdin.on('data', playGame);
