@@ -1,5 +1,7 @@
+import { showRandomMovie } from "./script.js";
+
 // Populate dropdown menu with all the available genres
-const populateGenreDropdown = (genres) => {
+export const populateGenreDropdown = (genres) => {
     const select = document.getElementById('genres')
 
     for (const genre of genres) {
@@ -11,7 +13,7 @@ const populateGenreDropdown = (genres) => {
 };
 
 // Returns the current genre selection from the dropdown menu
-const getSelectedGenre = () => {
+export const getSelectedGenre = () => {
     const selectedGenre = document.getElementById('genres').value;
     return selectedGenre;
 };
@@ -23,7 +25,7 @@ const showBtns = () => {
 };
 
 // Clear the current movie from the screen
-const clearCurrentMovie = () => {
+export const clearCurrentMovie = () => {
     const moviePosterDiv = document.getElementById('moviePoster');
     const movieTextDiv = document.getElementById('movieText');
     moviePosterDiv.innerHTML = '';
@@ -72,14 +74,14 @@ const createMovieOverview = (overview) => {
 };
 
 // Returns a random movie from the first page of movies
-const getRandomMovie = (movies) => {
+export const getRandomMovie = (movies) => {
     const randomIndex = Math.floor(Math.random() * movies.length);
     const randomMovie = movies[randomIndex];
     return randomMovie;
 };
 
 // Uses the DOM to create HTML to display the movie
-const displayMovie = (movieInfo) => {
+export const displayMovie = (movieInfo) => {
     const moviePosterDiv = document.getElementById('moviePoster');
     const movieTextDiv = document.getElementById('movieText');
     const likeBtn = document.getElementById('likeBtn');
