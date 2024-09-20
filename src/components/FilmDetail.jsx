@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from 'react';
-import OPEN from './common/film_key.json';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import findKey from './common/findKey.js';
 
 export const FilmDetail = () => {
     const params = useParams();
@@ -14,7 +14,7 @@ export const FilmDetail = () => {
 
     useEffect(() => {
         const GetFilm = () => {
-            axios.get("http://www.omdbapi.com/?apikey=" + OPEN.API_KEY + "&i=" + params.imdbID)
+            axios.get(`http://www.omdbapi.com/?apikey=${findKey("OMDB")}&i=${params.imdbID}`)
                 .then(response => {
                     console.log(response.data);
                     setFilmData(response.data);

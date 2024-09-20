@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import axios from 'axios';
 import FilmResults from './FilmResults';
-import OPEN from './common/film_key.json';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import findKey from './common/findKey.js';
 
 // http://www.omdbapi.com/
 
@@ -21,9 +19,9 @@ export const FilmSearch = () => {
     }
 
     const makeRequest = (e) => {
-        axios.get(`http://www.omdbapi.com/?apikey=${OPEN.API_KEY}&s=${filmTitle}&type=movie&page=1`)
+        axios.get(`http://www.omdbapi.com/?apikey=${findKey("OMDB")}&s=${filmTitle}&type=movie&page=1`)
             .then(response => {
-                console.log(response.data.Search);
+                // console.log(response.data.Search);
                 setResults(response.data.Search);
             });
     };
@@ -52,9 +50,7 @@ export const FilmSearch = () => {
                             ))
                         }
                     </Container>
-
                 </Container>
-
             </div>
         </>
     );

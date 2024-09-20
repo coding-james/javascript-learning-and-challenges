@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Dummy",
+        "description": "",
+        "link": "",
+        "apiKey": "Not this one"
+    },
+    {
+        "title": "OMDB",
+        "description": "",
+        "link": "https://www.omdbapi.com/apikey.aspx",
+        "apiKey": "******"
+    },
+    {
+        "title": "Dummy2",
+        "description": "",
+        "link": "",
+        "apiKey": "Not this one either"
+    }
+]
