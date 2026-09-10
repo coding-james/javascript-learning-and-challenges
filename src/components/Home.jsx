@@ -28,6 +28,18 @@ export default function Home() {
                         <h3>Number to Roman Numerals</h3>
                     </Link>
                 </div>
+                <br />
+                <div className="row text-center justify-content-around">
+                    <Link to="/watertemp" className="container col-3 rounded border border-secondary-subtle bg-success text-light shadow link-light">
+                        <h3>Water Temp</h3>
+                    </Link>
+                    <Link to="/placeholder" className="container col-3 rounded border border-secondary-subtle bg-success text-light shadow link-light">
+                        <h3>Place Holder 2</h3>
+                    </Link>
+                    <Link to="/placeholder" className="container col-3 rounded border border-secondary-subtle bg-success text-light shadow link-light">
+                        <h3>Place Holder 3</h3>
+                    </Link>
+                </div>
             </Container>
         </>
     )

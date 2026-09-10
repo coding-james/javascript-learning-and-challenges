@@ -6,6 +6,7 @@ import Counter from './components/Counter.jsx';
 import { FilmSearch } from './components/FilmSearch.jsx';
 import { FilmDetail } from './components/FilmDetail.jsx';
 import { NumberToRoman } from './components/NumberToRoman.jsx';
+import WaterTemp from './components/WaterTemp.jsx';
 
 function App() {
   return (
@@ -41,6 +42,8 @@ function App() {
                 <Route path="/film-search" element={<FilmSearch />} />
                 <Route path="/film/:imdbID" element={<FilmDetail />} />
                 <Route path="/number-to-roman" element={<NumberToRoman />} />
+                <Route path="/watertemp" element={<WaterTemp />} />
+                <Route path="/placeholder" element={<Home />} />
               </Routes>
             </div>
           </Col>
