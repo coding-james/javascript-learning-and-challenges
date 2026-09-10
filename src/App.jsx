@@ -1,3 +1,4 @@
+import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Container, Row, Col, Nav, Navbar } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,6 +7,7 @@ import Counter from './components/Counter.jsx';
 import { FilmSearch } from './components/FilmSearch.jsx';
 import { FilmDetail } from './components/FilmDetail.jsx';
 import { NumberToRoman } from './components/NumberToRoman.jsx';
+import Board from './components/ConnectFourBoard.jsx';
 import WaterTemp from './components/WaterTemp.jsx';
 
 function App() {
@@ -28,6 +30,9 @@ function App() {
             <Nav.Item>
               <Link to="/number-to-roman" className="nav-link">Convert to Roman</Link>
             </Nav.Item>
+            <Nav.Item>
+              <Link to="/connect-four" className="nav-link">Connect Four</Link>
+            </Nav.Item>
           </Nav>
         </Container>
       </Navbar>
@@ -42,6 +47,7 @@ function App() {
                 <Route path="/film-search" element={<FilmSearch />} />
                 <Route path="/film/:imdbID" element={<FilmDetail />} />
                 <Route path="/number-to-roman" element={<NumberToRoman />} />
+                <Route path="/connect-four" element={<Board />} />
                 <Route path="/watertemp" element={<WaterTemp />} />
                 <Route path="/placeholder" element={<Home />} />
               </Routes>

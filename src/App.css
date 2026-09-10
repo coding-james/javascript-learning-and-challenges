@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +24,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +42,49 @@
 
 .read-the-docs {
   color: #888;
+}
+
+#board {
+  width: 840px;
+  height: 700px;
+  padding: 20px 0;
+  margin: auto;
+  border-left: 50px solid blue;
+  border-right: 50px solid blue;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+  background: rgb(0, 174, 255);
+}
+
+.slot {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 45%;
+  background: lightgray;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 100px;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 40px;
+}
+
+.slot img {
+  transition: 1s;
+}
+
+#playerDisplay {
+  font-family: sans-serif;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 50px;
 }
